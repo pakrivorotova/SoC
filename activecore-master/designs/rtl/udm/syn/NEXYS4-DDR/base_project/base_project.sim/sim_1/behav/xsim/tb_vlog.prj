@@ -1,0 +1,24 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../tb" --include "../../../../base_project.srcs/sources_1/ip/sys_clk" \
+"../../../../base_project.ip_user_files/ip/sys_clk/sys_clk_clk_wiz.v" \
+"../../../../base_project.ip_user_files/ip/sys_clk/sys_clk.v" \
+
+sv xil_defaultlib  --include "../../../../../../../tb" --include "../../../../base_project.srcs/sources_1/ip/sys_clk" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/tb/tb.sv" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/syn/NEXYS4-DDR/NEXYS4_DDR.sv" \
+
+verilog xil_defaultlib  --include "../../../../../../../tb" --include "../../../../base_project.srcs/sources_1/ip/sys_clk" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/hdl/udm.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/hdl/uart_rx.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/hdl/udm_controller.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/udm/hdl/uart_tx.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/reset_sync/reset_sync.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/ram/ram_dual_memsplit.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/ram/ram.v" \
+"../../../../base_project.srcs/sources_1/imports/rtl/ram/ram_dual.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
